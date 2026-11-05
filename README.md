@@ -7,7 +7,7 @@
   </picture>
 </a>
 
-# Anthony — Principal front-end engineer
+# Anthony, principal front-end engineer
 
 **Front-end, no shortcuts.** Building interfaces since 2004, and circuits for even longer.
 
@@ -15,10 +15,10 @@
 
 ## Projects
 
-- **[Kit d’urgence](https://k0t3i.github.io/kit-urgence/)** — A 3D simulator that plans the emergency kit for your home: adults, children, from 72 hours to 3 weeks. In French.
-- **[SplitR](https://github.com/k0t3i/splitr-releases/releases/latest)** — A desktop app (Windows, macOS) to split, process and export media files.
-- **[MyCard](https://my-card.tisserands.ai/)** — SaaS platform for digital business cards, with a live editor and QR-code sharing.
-- **[MonScoreImmo](https://monscoreimmo.fr/)** — SaaS that scores the online presence of real-estate agents. Launching soon.
+- **[Kit d’urgence](https://k0t3i.github.io/kit-urgence/)**: A 3D simulator that plans the emergency kit for your home: adults, children, from 72 hours to 3 weeks. In French.
+- **[SplitR](https://github.com/k0t3i/splitr-releases/releases/latest)**: A desktop app (Windows, macOS) to split, process and export media files.
+- **[MyCard](https://my-card.tisserands.ai/)**: SaaS platform for digital business cards, with a live editor and QR-code sharing.
+- **[MonScoreImmo](https://monscoreimmo.fr/)**: SaaS that scores the online presence of real-estate agents. Launching soon.
 
 ## Contact
 
