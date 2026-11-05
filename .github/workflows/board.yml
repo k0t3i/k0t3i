@@ -1,0 +1,46 @@
+# Every day: reads the public contribution calendar of the profile (GraphQL) and the date of the
+# last commit of the site, renders the Routing board and the uptime line (scripts/render.mjs), and
+# publishes the SVGs alone on the `output` branch, which the README points at.
+name: Board
+
+on:
+  schedule:
+    - cron: "23 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: board
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+
+      - name: Test
+        run: node --test
+
+      - name: Render
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/render.mjs --out "$RUNNER_TEMP/board"
+
+      # An orphan branch with the SVGs only, one commit, force-pushed: only `output` is ever rewritten.
+      - name: Publish on the output branch
+        run: |
+          git switch --orphan output
+          cp "$RUNNER_TEMP"/board/*.svg .
+          git add -- *.svg
+          git -c user.name="github-actions[bot]" \
+              -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+              commit --quiet -m "chore: render the board of $(date -u +%F)"
+          git push --force origin output
