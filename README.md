@@ -23,3 +23,14 @@
 ## Contact
 
 [contact@tisserands.ai](mailto:contact@tisserands.ai) · [k0t3i.github.io](https://k0t3i.github.io/)
+
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/k0t3i/k0t3i/output/routage-dark-still.svg">
+  <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/k0t3i/k0t3i/output/routage-light-still.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/k0t3i/k0t3i/output/routage-dark.svg">
+  <img src="https://raw.githubusercontent.com/k0t3i/k0t3i/output/routage-light.svg" width="100%" alt="Anthony’s public GitHub contributions over the last year, drawn as pads on a circuit board and routed by one gold trace">
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/k0t3i/k0t3i/output/uptime-dark.svg">
+  <img src="https://raw.githubusercontent.com/k0t3i/k0t3i/output/uptime-light.svg" width="100%" alt="Uptime: the hours spent designing, coding, debugging, leading, teaching and learning, and the date of the latest revision of k0t3i.github.io">
+</picture>

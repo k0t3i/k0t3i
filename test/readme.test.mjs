@@ -20,7 +20,7 @@ const LINKS = [
 
 test('every image has a meaningful alternative', () => {
   const imgs = [...readme.matchAll(/<img\b[^>]*>/g)].map((m) => m[0]);
-  assert.equal(imgs.length, 1);
+  assert.equal(imgs.length, 3);
   for (const img of imgs) {
     const alt = /\balt="([^"]*)"/.exec(img)?.[1] ?? '';
     assert.ok(alt.split(' ').length >= 6, img);
@@ -36,7 +36,7 @@ test('links only to the site, the four public projects and the contact', () => {
 
 test('images come only from this repository: no third-party stats, no counters', () => {
   const urls = [...readme.matchAll(/(?:src|srcset)="([^"]+)"/g)].map((m) => m[1]);
-  assert.equal(urls.length, 4);
+  assert.equal(urls.length, 10);
   for (const url of urls) assert.ok(url.startsWith(RAW), url);
   assert.doesNotMatch(readme, /shields\.io|readme-stats|vercel\.app|komarev|hits\.|visitor|counter/i);
 });
@@ -44,6 +44,8 @@ test('images come only from this repository: no third-party stats, no counters',
 test('each board in light and dark, and still for reduced motion', () => {
   for (const name of [
     'main/assets/banner-light.svg', 'main/assets/banner-dark.svg', 'main/assets/banner-light-still.svg', 'main/assets/banner-dark-still.svg',
+    'output/routage-light.svg', 'output/routage-dark.svg', 'output/routage-light-still.svg', 'output/routage-dark-still.svg',
+    'output/uptime-light.svg', 'output/uptime-dark.svg',
   ]) {
     assert.ok(readme.includes(`"${RAW}${name}"`), name);
   }
