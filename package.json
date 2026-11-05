@@ -1,13 +1,14 @@
 {
   "name": "k0t3i-profile",
   "private": true,
-  "description": "The GitHub profile of k0t3i: its README and its banner.",
+  "description": "The GitHub profile of k0t3i: its README, its banner and the daily board of contributions.",
   "type": "module",
   "engines": {
     "node": ">=22"
   },
   "scripts": {
     "test": "node --test",
-    "banner": "node scripts/build-banner.mjs"
+    "banner": "node scripts/build-banner.mjs",
+    "render": "node scripts/render.mjs"
   }
 }
